@@ -97,13 +97,13 @@ const Login = () => {
             <div className="divider my-5"></div>
             <div className="mb-t flex justify-center gap-10">
                 <div>
-                    <button onClick={googleSignIn} className=" text-2xl bg-gray-200 p-3 rounded-2xl"><FaGoogle></FaGoogle></button>
+                    <button onClick={googleSignIn} className=" text-2xl bg-gray-200 p-3 rounded-2xl"><FcGoogle size={32} /></button>
                     <p>Google</p>
                 </div>
                 <div>
                     <button
                         onClick={gitSignIn}
-                        className="  text-2xl bg-gray-200 p-3 rounded-2xl"> <FaGithub></FaGithub></button>
+                        className="  text-2xl bg-gray-200 p-3 rounded-2xl"> <FaGithub size={32} /></button>
                     <p>Github</p>
                 </div>
             </div>

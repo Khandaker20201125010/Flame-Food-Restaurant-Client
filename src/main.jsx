@@ -12,6 +12,7 @@ import AllFoods from './Components/AllFoods/AllFoods';
 import Gallery from './Components/Gallery/Gallery';
 import Myprofile from './Components/Myprofile/Myprofile';
 import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
        {
         path:'/Login',
         element:<Login></Login>
+      },
+       {
+        path:'/Register',
+        element:<Register></Register>
       },
     
     

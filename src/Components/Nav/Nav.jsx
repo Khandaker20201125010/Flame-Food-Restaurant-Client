@@ -93,7 +93,7 @@ const Nav = () => {
                 <a className="animate__animated animate__flip ml-10 text-3xl text-orange-500  font-bold"><span className="text-red-500">Flame</span> Restaurant</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 gap-4 text-white font-bold">
+                <ul className="menu menu-horizontal px-1 gap-4 text-black font-bold">
                     {links}
                 </ul>
             </div>
@@ -109,10 +109,10 @@ const Nav = () => {
                 </div>
                 {
                     user ?
-                        <button onClick={handelSignOut} className="btn btn-info text-white w-28">Log Out</button>
+                        <button onClick={handelSignOut} className="btn btn-info text-white font-extrabold w-28">Log Out</button>
                         :
                         <NavLink to="/Login">
-                            <button className="btn bg-red-700 font-bold text-white w-28">Log in</button>
+                            <button className="btn bg-red-700 font-extrabold text-white w-28">Log in</button>
                         </NavLink>
 
                 }
