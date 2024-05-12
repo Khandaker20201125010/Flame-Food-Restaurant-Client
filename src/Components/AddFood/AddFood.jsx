@@ -17,10 +17,11 @@ const AddFood = () => {
         const price =form.price.value;
         const country = form.country.value;
         const shortDescription =form.shortDescription.value;
+        const  borrowedFoods = 0
 
         const email = user?.email;
         const Image = form.photo.value;
-        const addFood ={shortDescription,country,price,quantity,foodCategory,foodName,name,email,Image}
+        const addFood ={borrowedFoods,shortDescription,country,price,quantity,foodCategory,foodName,name,email,Image}
         console.log(addFood)
         form.reset()
        

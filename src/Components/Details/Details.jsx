@@ -1,12 +1,48 @@
 import { Helmet } from "react-helmet";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, Navigate, useLoaderData, useParams } from "react-router-dom";
+import { AuthContext } from "../Providers/Authprovider";
+import { useContext } from "react";
+import Swal from "sweetalert2";
 
 const Details = () => {
+    const {user} = useContext(AuthContext)
     const {id} = useParams();
     const allFood = useLoaderData();
     const details = allFood?.find(item => item._id === id)
-    console.log(allFood)
-    const {_id,shortDescription,country,price,quantity,foodCategory,foodName,name,email,Image} = details
+    const {_id,shortDescription,country,price,quantity,foodCategory,foodName,name,email,Image,borrowedFoods } = details
+
+    const updatedFoods = { _id, foodName,quantity:parseInt(quantity)-1,borrowedFoods:parseInt(borrowedFoods)+1, shortDescription, price, foodCategory,buyerName:user?.displayName, Image, isSold: true ,buyersEmail:user?.email};
+    const handleUpdate = (_id) => {
+
+        if(quantity < 1 ){
+           return  Swal.fire({
+            title: "error!",
+            text: "No More Available  Food!",
+            icon: "error"
+        });
+        }
+
+        fetch(`http://localhost:5000/restaurant/${_id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedFoods)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: "Success!",
+                        text: "Buy Book successfully!",
+                        icon: "success"
+                    });
+                }
+                Navigate('/OrderedFood')
+            })
+
+    }
     return (
         <div>
             <div className="my-12 md:flex shadow-lg  gap-10 md:p-10 p-5">
@@ -29,7 +65,7 @@ const Details = () => {
             <div className="flex justify-between">
                 <Link to={-1}><button className="  my-5 text-center px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-400 border hover:border-red-500 text-white font-bold">Back</button></Link>
 
-                <Link ><button className="  my-5 text-center px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-400 border hover:border-red-500 text-white font-bold">Buy Now</button></Link>
+                <Link  ><button onClick={() => handleUpdate(_id)} className="  my-5 text-center px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-400 border hover:border-red-500 text-white font-bold">Purchase Now</button></Link>
 
             </div>
             </div>

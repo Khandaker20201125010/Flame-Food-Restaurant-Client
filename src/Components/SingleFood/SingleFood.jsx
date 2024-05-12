@@ -5,6 +5,7 @@ const SingleFood = ({food}) => {
     
     return (
         <div>
+            
           <div className='shadow-lg p-5 rounded-md flex flex-col border'>
             <div className='flex justify-center mb-4'>
                 <img className=' h-80 w-80 rounded-full' src={Image} alt="" />
