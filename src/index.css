@@ -19,6 +19,17 @@
     background-size: cover;
     height: 70vh;
 }
+  .lo {
+    display: flex;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
 .all{
-    background-image: url('./assets/images//all.jpg');
+    background-image: url('./assets/images/all.jpg');
+}
+.fo{
+    background-image: url('./assets/images/4.jpeg');
+
 }

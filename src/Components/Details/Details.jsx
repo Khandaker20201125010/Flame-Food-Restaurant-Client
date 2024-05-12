@@ -35,7 +35,7 @@ const Details = () => {
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: "Success!",
-                        text: "Buy Book successfully!",
+                        text: "Purchases Food Successfully!",
                         icon: "success"
                     });
                 }

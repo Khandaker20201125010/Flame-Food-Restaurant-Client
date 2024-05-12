@@ -17,25 +17,30 @@ import Myfood from './Components/Myfood/Myfood';
 import OrderedFood from './Components/OrderedFood/OrderedFood';
 import AddFood from './Components/AddFood/AddFood';
 import Details from './Components/Details/Details';
+import Error from './Components/Error/Error';
+import Privetroot from './Components/Privet/Privetroot';
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement:<Error></Error>,
     element: <Main></Main>,
+    
     children:[{
       path:'/',
       element:<Home></Home>,
        },
        {
         path:'/AllFoods',
-        element:<AllFoods></AllFoods>
+        
+        element:<Privetroot><AllFoods></AllFoods></Privetroot>
       },
        {
         path:'/Gallery',
-        element:<Gallery></Gallery>
+        element:<Privetroot><Gallery></Gallery></Privetroot>
       },
        {
         path:'/MyProfile',
-        element:<Myprofile></Myprofile>
+        element:<Privetroot><Myprofile></Myprofile></Privetroot>
       },
        {
         path:'/Login',
@@ -47,20 +52,20 @@ const router = createBrowserRouter([
       },
        {
         path:'/MyFood',
-        element:<Myfood></Myfood>
+        element:<Privetroot><Myfood></Myfood></Privetroot>
       },
        {
         path:'/OrderedFood',
-        element:<OrderedFood></OrderedFood>,
+        element:<Privetroot><OrderedFood></OrderedFood></Privetroot>,
         loader:()=> fetch('http://localhost:5000/restaurant')
       },
        {
         path:'/AddFood',
-        element:<AddFood></AddFood>
+        element:<Privetroot><AddFood></AddFood></Privetroot>
       },
        {
         path:'/details/:id',
-        element:<Details></Details>,
+        element:<Privetroot><Details></Details></Privetroot>,
         loader:()=> fetch('http://localhost:5000/restaurant')
         
       },
