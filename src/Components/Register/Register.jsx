@@ -74,11 +74,11 @@ const Register = () => {
     
 
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen lbg p-2">
         <Helmet>
             <title>Register</title>
         </Helmet>
-        <div   className="w-4/5 lg:w-1/3 md:w-2/3 mx-auto bg-gray-100 shadow-xl p-5 rounded-lg my-20">
+        <div   className="w-4/5 lg:w-1/3 md:w-2/3 mx-auto bg-orange-100 shadow-xl p-5 rounded-lg my-20">
             <h2 className="text-2xl font-bold text-center my-3">Please Register </h2>
 
             {
@@ -112,7 +112,7 @@ const Register = () => {
                     passwordError && <p className="text-red-500">  {passwordError}</p>
                 }
 
-                <input className=" w-full px-4 py-2 text-center text-lg rounded-md bg-gray-500 hover:bg-gray-400 border hover:border-red-500 text-white font-bold my-3" type="submit" value="Register" />
+                <input className=" w-full px-4 py-2 text-center text-lg rounded-md bg-orange-500 hover:bg-orange-400 border hover:border-red-500 text-white font-bold my-3" type="submit" value="Register" />
             </form>
 
             <p>Already have an account ? <Link to='/login' className="text-red-500 font-bold underline">please Login</Link></p>

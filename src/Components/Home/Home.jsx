@@ -1,11 +1,14 @@
+import Banner from "../Banner/Banner";
 
-import Header from "../Header/Header";
+
+
 
 const Home = () => {
     return (
-        <div>
-            <Header></Header>
+        <div className="">
+           <Banner></Banner>
         </div>
+        
     );
 };
 

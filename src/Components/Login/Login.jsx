@@ -14,6 +14,7 @@ import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import app from "../Firebase/firebase.config";
+import i from "../../assets/images/1.jpg"
 
 import { Helmet } from "react-helmet";
 const Login = () => {
@@ -69,11 +70,12 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-screen"> 
+        <div className="min-h-screen lbg p-2 "> 
+        
         <Helmet>
             <title>Login</title>
         </Helmet>
-        <div  className="w-4/5 lg:w-1/3 md:w-2/3 mx-auto bg-gray-100 shadow-xl p-5 rounded-lg my-20">
+        <div  className="w-4/5 lg:w-1/3 md:w-2/3 mx-auto shadow-2xl p-5 bg-orange-300  rounded-lg my-20 ">
             <h2 className="text-2xl font-bold text-center my-3">LogIn Your Account</h2>
             <form onSubmit={handleLogin}>
 
@@ -89,7 +91,7 @@ const Login = () => {
                     </span>
                 </div>
 
-                <input className=" w-full px-4 py-2 text-center text-lg rounded-md bg-gray-500 hover:bg-gray-400 border hover:border-red-500 text-white font-bold my-3" type="submit" value="Login" />
+                <input className=" w-full px-4 py-2 text-center text-lg rounded-md bg-orange-200 hover:bg-orange-400 border hover:border-red-500 text-black font-bold my-3" type="submit" value="Login" />
             </form>
 
             <p>Do not have an account ? <Link to='/register' className="text-red-500 font-bold underline">please Register</Link></p>
@@ -97,13 +99,13 @@ const Login = () => {
             <div className="divider my-5"></div>
             <div className="mb-t flex justify-center gap-10">
                 <div>
-                    <button onClick={googleSignIn} className=" text-2xl bg-gray-200 p-3 rounded-2xl"><FcGoogle size={32} /></button>
+                    <button onClick={googleSignIn} className=" text-2xl bg-orange-200 p-3 rounded-2xl"><FcGoogle size={32} /></button>
                     <p>Google</p>
                 </div>
                 <div>
                     <button
                         onClick={gitSignIn}
-                        className="  text-2xl bg-gray-200 p-3 rounded-2xl"> <FaGithub size={32} /></button>
+                        className="  text-2xl bg-orange-200 p-3 rounded-2xl"> <FaGithub size={32} /></button>
                     <p>Github</p>
                 </div>
             </div>

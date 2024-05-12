@@ -1,3 +1,4 @@
+import '../slidercss/Slider.css'
 const Banner = () => {
 
     const nextSlide = () => {
@@ -11,10 +12,8 @@ const Banner = () => {
     };
 
     return (
-        <div className="container">
-
-            <div className="slide">
-
+        <div className="bs ">
+            <div className="slide ">
                 <div className="item" style={{backgroundImage: "url(https://i.ibb.co/BPY9PZh/pexels-photo-958545-jpeg-cs-srgb-dl-pexels-chanwalrus-958545.jpg)"}}>
                     <div className="content">
                         <div className="name">Tandoori roti</div>
@@ -32,7 +31,7 @@ const Banner = () => {
                 <div className="item" style={{backgroundImage: "url(https://i.ibb.co/PTXj1dn/double-hamburger-isolated-on-white-background-fresh-burger-fast-food-with-beef-and-cream-cheese-real.jpg)"}}>
                     <div className="content">
                         <div className="name">Mega Burger</div>
-                        <div className="des">Introducing our Mega Burger – a colossal creation that's sure to satisfy your cravings! Packed with juicy, flame-grilled patties, layers of melted cheese, crisp lettuce, ripe tomatoes, and our special sauce, it's a mouthwatering masterpiece that's larger than life. Treat yourself to the ultimate burger experience and indulge in our Mega Burger today</div>
+                        <div className="des">Introducing our Mega Burger – a colossal creation thats sure to satisfy your cravings! Packed with juicy, flame-grilled patties, layers of melted cheese, crisp lettuce, ripe tomatoes, and our special sauce, its a mouthwatering masterpiece thats larger than life. Treat yourself to the ultimate burger experience and indulge in our Mega Burger today</div>
                         <button className="btn">Check All Foods</button>
                     </div>
                 </div>
