@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // import moment from 'moment';
 import 'animate.css';
 import { useContext, useEffect, useState } from "react";
@@ -90,7 +90,7 @@ const Nav = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="animate__animated animate__flip ml-10 text-3xl text-orange-500  font-bold"><span className="text-red-500">Flame</span> Restaurant</a>
+                <a className="animate__animated animate__flip ml-10 text-3xl text-orange-500  font-bold"><span className="text-red-500">Flame</span> Food Restaurant</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-4 text-black font-bold">
@@ -113,7 +113,10 @@ const Nav = () => {
                 </div>
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        {links}
+                        <li><Link to="/MyFood">My Food</Link></li>
+                        <li><Link to="/AddFood">Add Food</Link></li>
+                        <li><Link to="/OrderedFood">Ordered Food</Link></li>
+                        
                     </ul>
                 </div>
 

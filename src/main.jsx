@@ -13,6 +13,10 @@ import Gallery from './Components/Gallery/Gallery';
 import Myprofile from './Components/Myprofile/Myprofile';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
+import Myfood from './Components/Myfood/Myfood';
+import OrderedFood from './Components/OrderedFood/OrderedFood';
+import AddFood from './Components/AddFood/AddFood';
+import Details from './Components/Details/Details';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +44,24 @@ const router = createBrowserRouter([
        {
         path:'/Register',
         element:<Register></Register>
+      },
+       {
+        path:'/MyFood',
+        element:<Myfood></Myfood>
+      },
+       {
+        path:'/OrderedFood',
+        element:<OrderedFood></OrderedFood>
+      },
+       {
+        path:'/AddFood',
+        element:<AddFood></AddFood>
+      },
+       {
+        path:'/details/:id',
+        element:<Details></Details>,
+        loader:({params})=> fetch(`http://localhost:5000/restaurant/${params.id}`)
+        
       },
     
     
