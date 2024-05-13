@@ -19,6 +19,7 @@ import AddFood from './Components/AddFood/AddFood';
 import Details from './Components/Details/Details';
 import Error from './Components/Error/Error';
 import Privetroot from './Components/Privet/Privetroot';
+import TopSellFood from './Components/TopSellFood/TopSellFood';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
     children:[{
       path:'/',
       element:<Home></Home>,
+      loader:()=> fetch('http://localhost:5000/restaurant')
        },
        {
         path:'/AllFoods',
@@ -52,7 +54,7 @@ const router = createBrowserRouter([
       },
        {
         path:'/MyFood',
-        element:<Privetroot><Myfood></Myfood></Privetroot>
+        element:<Privetroot><Myfood></Myfood></Privetroot>,
       },
        {
         path:'/OrderedFood',
@@ -62,6 +64,11 @@ const router = createBrowserRouter([
        {
         path:'/AddFood',
         element:<Privetroot><AddFood></AddFood></Privetroot>
+      },
+       {
+        path:'/TopSellFood',
+        element:<TopSellFood></TopSellFood>,
+       
       },
        {
         path:'/details/:id',

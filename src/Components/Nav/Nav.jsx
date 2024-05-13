@@ -64,16 +64,6 @@ const Nav = () => {
                     Gallery
                 </NavLink>
             </li>
-            <li>
-                <NavLink
-                    className={({ isActive }) =>
-                        isActive ? 'btn btn-outline btn-error' : 'font-bold'
-                    }
-                    to="/MyProfile"
-                >
-                    My Profile
-                </NavLink>
-            </li>
         </>
     );
 

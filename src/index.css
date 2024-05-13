@@ -33,3 +33,9 @@
     background-image: url('./assets/images/4.jpeg');
 
 }
+.avg{
+  background-image: url('./assets/images/avg.jpg');
+  background-size: cover;
+  height: 600px;
+
+}
