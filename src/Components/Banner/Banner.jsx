@@ -73,7 +73,9 @@ const Banner = () => {
                                 <h1 className='text-8xl text-center text-white m-auto font-bold'>Biryani</h1>
                                 <p className='text-xl text-center m-auto w-2/3 text-white mt-5 font-bold'>Biryani is a mixed rice dish, mainly popular in South Asia. It is made with rice, some type of meat and spices. To cater to vegetarians, in some cases, it is prepared by substituting vegetables or paneer for the meat.</p>
                                 <div className='m-auto text-center mt-5'>
-                                    <button className='btn text-white w-40 rounded-2xl btn-outline   hover:bg-orange-600 text-xl'>See All Food</button>
+                                   <Link to={`/AllFoods`}>
+                                    <button className='btn text-white w-40 rounded-2xl btn-outline hover:bg-orange-600 text-xl'>See All Food</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +86,9 @@ const Banner = () => {
                                 <h1 className='text-8xl text-center text-white m-auto font-bold'>Cream Cake</h1>
                                 <p className='text-xl text-center m-auto w-2/3 text-white mt-5 font-bold'> It's the perfect dessert to make on a whim: There's no need to paddle butter and sugar together or bring your ingredients to room temperature.</p>
                                 <div className='m-auto text-center mt-5'>
-                                    <button className='btn text-white w-40 rounded-2xl btn-outline hover:bg-orange-600    text-xl'>See All Food</button>
+                                    <Link to={`/AllFoods`}>
+                                    <button className='btn text-white w-40 rounded-2xl btn-outline hover:bg-orange-600 text-xl'>See All Food</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
