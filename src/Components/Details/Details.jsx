@@ -10,7 +10,7 @@ const Details = () => {
     const { id } = useParams();
     const allFood = useLoaderData();
     const details = allFood?.find(item => item._id === id)
-    const { _id, shortDescription, country, price, quantity, foodCategory, foodName, name, email, Image, borrowedFoods } = details
+    const { _id, shortDescription, country, price, quantity, foodCategory, foodName,  Image, borrowedFoods } = details
     const currentDate = new Date(Date.now());
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth() + 1;
@@ -19,45 +19,45 @@ const Details = () => {
 
 
     const updatedFoods = { _id, time:{year:year,month:month,day:day}, foodName, quantity: parseInt(quantity) - 1, borrowedFoods: parseInt(borrowedFoods) + 1, shortDescription, price, foodCategory, buyerName: user?.displayName, Image, isSold: true, buyersEmail: user?.email };
-    const handleUpdate = (_id) => {
+    // const handleUpdate = (_id) => {
 
-        if (quantity < 1) {
-            return Swal.fire({
-                title: "error!",
-                text: "No More Available  Food!",
-                icon: "error"
-            });
-        }
-        if (borrowedFoods > 19) {
-            return Swal.fire({
-                title: "error!",
-                text: "You can not buy Food more then 20 !",
-                icon: "error"
-            });
-        }
+    //     if (quantity < 1) {
+    //         return Swal.fire({
+    //             title: "error!",
+    //             text: "No More Available  Food!",
+    //             icon: "error"
+    //         });
+    //     }
+    //     if (borrowedFoods > 19) {
+    //         return Swal.fire({
+    //             title: "error!",
+    //             text: "You can not buy Food more then 20 !",
+    //             icon: "error"
+    //         });
+    //     }
 
-        fetch(`http://localhost:5000/restaurant/${_id}`, {
-            method: 'PATCH',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(updatedFoods)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.modifiedCount > 0) {
-                    Swal.fire({
-                        title: "Success!",
-                        text: "Purchases Food Successfully!",
-                        icon: "success"
-                    });
-                }
-                navigate('/FreedBack')
+    //     fetch(`http://localhost:5000/restaurant/${_id}`, {
+    //         method: 'PATCH',
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(updatedFoods)
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data)
+    //             if (data.modifiedCount > 0) {
+    //                 Swal.fire({
+    //                     title: "Success!",
+    //                     text: "Purchases Food Successfully!",
+    //                     icon: "success"
+    //                 });
+    //             }
+    //             navigate('/FreedBack')
 
-            })
+    //         })
 
-    }
+    // }
     return (
         <div>
             <div className="my-12 md:flex shadow-lg  gap-10 md:p-10 p-5">
@@ -80,7 +80,7 @@ const Details = () => {
                     <div className="flex justify-between">
                         <Link to={-1}><button className="  my-5 text-center px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-400 border hover:border-red-500 text-white font-bold">Back</button></Link>
 
-                        <Link  ><button onClick={() => handleUpdate(_id)} className="  my-5 text-center px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-400 border hover:border-red-500 text-white font-bold">Purchase Now</button></Link>
+                        <Link  to={`/FreedBack/update/${_id}`} ><button className="  my-5 text-center px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-400 border hover:border-red-500 text-white font-bold">Purchase Now</button></Link>
 
                     </div>
                 </div>

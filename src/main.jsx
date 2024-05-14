@@ -64,9 +64,9 @@ const router = createBrowserRouter([
         loader:()=> fetch('http://localhost:5000/restaurant')
       },
        {
-        path:'/FreedBack',
+        path:'/FreedBack/update/:id',
         element:<Privetroot><FeedBack></FeedBack></Privetroot>,
-        loader:()=> fetch('http://localhost:5000/restaurant')
+        loader: ({params}) => fetch(`http://localhost:5000/restaurant/update/${params.id}`),
       },
        {
         path:'/AddFood',

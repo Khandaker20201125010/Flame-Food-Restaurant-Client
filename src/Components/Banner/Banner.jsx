@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 
 const Banner = () => {
@@ -32,7 +33,10 @@ const Banner = () => {
                                 <p className='text-xl text-center m-auto w-2/3 text-white mt-5 font-bold'>Experience the tantalizing flavors of our Tandoori Roti with a variety of delectable options. From classic garlic-infused to cheese-stuffed, each roti is freshly baked to perfection, delivering an explosion of taste with every bite. Come savor the diversity of our Tandoori Roti selection and elevate your dining experience.</p>
 
                                 <div className='m-auto text-center mt-5'>
+                                    <Link to={`/AllFoods`}>
                                     <button className='btn text-white w-40 rounded-2xl btn-outline hover:bg-orange-600 text-xl'>See All Food</button>
+                                    </Link>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -43,7 +47,9 @@ const Banner = () => {
                                 <h1 className='text-8xl text-center text-white m-auto font-bold'>Pizza</h1>
                                 <p className='text-xl text-center m-auto w-2/3 text-white mt-5 font-bold'>Indulge in our mouthwatering pizzas, crafted with love and authenticity. Each bite is a symphony of flavors, from our homemade crust to the freshest toppings. Join us and experience the true essence of Italian cuisine</p>
                                 <div className='m-auto text-center mt-5'>
-                                    <button className='btn text-white w-40 rounded-2xl btn-outline hover:bg-orange-600  text-xl'>See All Food</button>
+                                    <Link to={`/AllFoods`}>
+                                    <button className='btn text-white w-40 rounded-2xl btn-outline hover:bg-orange-600 text-xl'>See All Food</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +60,9 @@ const Banner = () => {
                                 <h1 className='text-8xl text-center text-white m-auto font-bold'>Mega Burger</h1>
                                 <p className='text-xl text-center m-auto w-2/3 text-white mt-5 font-bold'>Introducing our Mega Burger – a colossal creation thats sure to satisfy your cravings! Packed with juicy, flame-grilled patties, layers of melted cheese, crisp lettuce, ripe tomatoes, and our special sauce, its a mouthwatering masterpiece thats larger than life. Treat yourself to the ultimate burger experience and indulge in our Mega Burger today</p>
                                 <div className='m-auto text-center mt-5'>
-                                    <button className='btn text-white w-40 rounded-2xl btn-outline hover:bg-orange-600  text-xl'>See All Food</button>
+                                    <Link to={`/AllFoods`}>
+                                    <button className='btn text-white w-40 rounded-2xl btn-outline hover:bg-orange-600 text-xl'>See All Food</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
