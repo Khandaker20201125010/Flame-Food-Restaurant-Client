@@ -51,7 +51,7 @@ const AddFood = () => {
         <div>
               <div className="lbg">
             <Helmet>
-               ^^AddToursitSport^^
+               ^^AddFood^^
             </Helmet>
             <div className="p-5">
                 <div className="md:w-2/3 w-4/5 mx-auto shadow-lg bg-orange-200 text-black mt-5 md:mt-10 p-5 rounded-lg">

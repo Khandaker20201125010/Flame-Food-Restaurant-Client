@@ -21,6 +21,7 @@ import Error from './Components/Error/Error';
 import Privetroot from './Components/Privet/Privetroot';
 import TopSellFood from './Components/TopSellFood/TopSellFood';
 import FeedBack from './Components/FeedBack/FeedBack';
+import UpdateFood from './Components/UpdateFood/UpdateFood';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -80,6 +81,13 @@ const router = createBrowserRouter([
         path:'/details/:id',
         element:<Privetroot><Details></Details></Privetroot>,
         loader:()=> fetch('http://localhost:5000/restaurant')
+        
+      },
+    
+       {
+        path:'/UpdateFood/:id',
+        element:<Privetroot><UpdateFood></UpdateFood></Privetroot>,
+        loader: ({params}) => fetch(`http://localhost:5000/restaurant/place/${params.id}`),
         
       },
     

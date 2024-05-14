@@ -102,7 +102,7 @@ const Nav = () => {
                     )}
                 </div>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[50] p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to="/MyFood">My Food</Link></li>
                         <li><Link to="/AddFood">Add Food</Link></li>
                         <li><Link to="/OrderedFood">Ordered Food</Link></li>
