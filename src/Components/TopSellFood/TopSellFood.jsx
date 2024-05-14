@@ -5,7 +5,7 @@ const TopSellFood = ({allFoods}) => {
     
      
     const sorted = allFoods?.sort((a,b) => b.borrowedFoods -a.borrowedFoods).slice(0,6)
-    console.log(sorted)
+  
     
 
     return (

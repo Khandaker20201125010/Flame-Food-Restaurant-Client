@@ -39,3 +39,30 @@
   height: 600px;
 
 }
+.slide {
+  display: flex;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+}
+.slide1{
+  background-image: url('./assets/images/img1.jpg');;
+}
+.slide2{
+  background-image: url('./assets/images/img2.jpg');;
+}
+.slide3{
+  background-image: url('./assets/images/3.jpg');;
+}
+.slide4{
+  background-image: url('./assets/images/img4.jpg');;
+}
+.slide5{
+  background-image: url('./assets/images/img5.jpg');;
+}
+
+.swiper-slide-custom {
+  margin-right: 10px; /* Adjust this value to bring images closer */
+}

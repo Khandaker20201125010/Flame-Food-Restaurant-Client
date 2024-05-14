@@ -53,7 +53,7 @@ const Details = () => {
                         icon: "success"
                     });
                 }
-                navigate('/OrderedFood')
+                navigate('/FreedBack')
 
             })
 
