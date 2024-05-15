@@ -11,21 +11,11 @@ const FeedBack = () => {
     const navigate = useNavigate()
     const {_id,shortDescription,country,price,quantity,foodCategory,foodName,name,email,Image,borrowedFoods,buyerName,buyersEmail,isSold,time,preview } = food
     console.log(food)
-    
-    
-
-
-
-
-
-
-
-
-
     const currentDate = new Date(Date.now());
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth() + 1;
     const day = currentDate.getDate();
+    
     const handleUpdate = (_id) => {
         console.log("hi murad vai kemon asen")
         // e.preventDefault()
@@ -70,7 +60,8 @@ const FeedBack = () => {
             <div className="mb-4">
               
                 <label className="block text-gray-700 text-sm font-bold mb-2" >Your Review</label>
-                <input type="text" disabled   placeholder={name} className="resize-none border mt-2 w-full rounded-xl py-2 px-3 text-black leading-tight focus:outline-none  focus:shadow-outline" />
+                <input type="text" disabled='disabled' defaultValue={user?.displayName} placeholder='name' className="resize-none border mt-2 w-full rounded-xl py-2 px-3 text-black leading-tight focus:outline-none  focus:shadow-outline" />
+
                 <input type="text" name="review" id="inputField" rows="4" placeholder="Write your review here..." className="resize-none border mt-2 w-full rounded-xl py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
                 <input type="text" name="review" id="Image" rows="4" placeholder="Add URL" className="resize-none border mt-2 w-full rounded-xl py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
                

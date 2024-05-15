@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Typewriter } from "react-simple-typewriter";
 
 const SingleGalary = ({ food }) => {
     const { _id, shortDescription, country, price, quantity, foodCategory, foodName, name, email, Image,preview } = food
@@ -9,7 +10,8 @@ const SingleGalary = ({ food }) => {
         setIsOverlayVisible(!isOverlayVisible);
     }
     return (
-        <div>
+        <div className="">
+           
             <div>
                 <div
                     className="relative"
