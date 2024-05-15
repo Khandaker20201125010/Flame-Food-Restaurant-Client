@@ -22,7 +22,8 @@ import Privetroot from './Components/Privet/Privetroot';
 import TopSellFood from './Components/TopSellFood/TopSellFood';
 import FeedBack from './Components/FeedBack/FeedBack';
 import UpdateFood from './Components/UpdateFood/UpdateFood';
-import Purchase from './Components/Purchase/Purchase';
+import Purchase from './Components/Purchas/Purchase';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -65,13 +66,14 @@ const router = createBrowserRouter([
         loader:()=> fetch('http://localhost:5000/restaurant')
       },
        {
-        path:'/FreedBack/update/:id',
+        path:'/FeedBack/update/:id',
         element:<Privetroot><FeedBack></FeedBack></Privetroot>,
         loader: ({params}) => fetch(`http://localhost:5000/restaurant/update/${params.id}`),
       },
        {
-        path:'/purchase',
+        path:'/purchase/uptodate/:id',
         element:<Privetroot><Purchase></Purchase></Privetroot>,
+        loader: ({params}) => fetch(`http://localhost:5000/restaurant/uptodate/${params.id}`),
       },
        {
         path:'/AddFood',

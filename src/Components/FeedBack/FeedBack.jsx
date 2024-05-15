@@ -15,7 +15,7 @@ const FeedBack = () => {
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth() + 1;
     const day = currentDate.getDate();
-    
+
     const handleUpdate = (_id) => {
         console.log("hi murad vai kemon asen")
         // e.preventDefault()

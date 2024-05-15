@@ -59,7 +59,7 @@ const SingleOrder = ({ food }) => {
                         <h2 className="font-bold">Food Category: {foodCategory}</h2>
                         <div className='flex justify-between'>
                             <h2 className="font-bold">Price: {price} $</h2>
-                            <h2 className="font-bold">Quantity: {quantity}</h2>
+                            <h2 className="font-bold">Count: {borrowedFoods}</h2>
 
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const SingleFood = ({food}) => {
-   const {_id,shortDescription,country,price,quantity,foodCategory,foodName,name,email,Image} = food 
+   const {_id,shortDescription,country,price,quantity,foodCategory,foodName,name,email,Image,borrowedFoods} = food 
     
     return (
         <div>

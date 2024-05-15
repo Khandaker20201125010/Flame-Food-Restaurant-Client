@@ -32,7 +32,7 @@ const SingleGalary = ({ food }) => {
                                 <p>Feedback: {preview}</p>
                             </div>
                             <div>
-                                <Link to={`/FreedBack/update/${_id}`}>
+                                <Link to={`/FeedBack/update/${_id}`}>
                                 <button className="btn w-44 text-center m-auto font-bold  mt-10 bg-orange-500" onClick={() => document.getElementById('my_modal_1').showModal()}>Add</button>
                                 </Link>
                               

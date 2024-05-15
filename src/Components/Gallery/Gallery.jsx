@@ -17,7 +17,7 @@ const Gallery = () => {
                 <h1 className="text-center m-auto text-white text-8xl font-bold w-3/4">
                     <span style={{ color: 'white', fontWeight: 'bold' }}>
                         <Typewriter
-                            words={['Welcome To All Food Page']}
+                            words={['Welcome To All Food Gallery']}
                             loop={1}
                             cursor
                             cursorStyle='❤'

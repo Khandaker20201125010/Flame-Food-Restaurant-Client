@@ -67,20 +67,24 @@ const Details = () => {
                 <div className="md:flex-1 flex justify-center">
                     <img className="w-[600px] h-80 max-sm:mb-5 rounded-2xl" src={Image} alt="" />
                 </div>
+            
                 <div className='md:flex-1 md:space-y-3'>
                     <h2 className="font-bold">Food Name: {foodName}</h2>
+                    <p className="font-bold text-xl">Made BY:{user?.displayName}</p>
                     <h2 className="font-bold">Category: {foodCategory}</h2>
                     <p>{shortDescription}</p>
                     <div className='flex justify-between'>
                         <h2 className="font-bold">Country: {country}</h2>
                         <h2 className="font-bold text-red-500">Quantity: <span className='mx-1'>{quantity}</span></h2>
+
                     </div>
                     <p className="font-bold">Price: {price} $</p>
+
 
                     <div className="flex justify-between">
                         <Link to={-1}><button className="  my-5 text-center px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-400 border hover:border-red-500 text-white font-bold">Back</button></Link>
 
-                        <Link  to='/purchase' ><button className="  my-5 text-center px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-400 border hover:border-red-500 text-white font-bold">Purchase Now</button></Link>
+                        <Link  to={`/purchase/uptodate/${_id}`} ><button className="  my-5 text-center px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-400 border hover:border-red-500 text-white font-bold">Purchase Now</button></Link>
 
                     </div>
                 </div>
