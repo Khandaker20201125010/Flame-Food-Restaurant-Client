@@ -25,7 +25,7 @@ const AddFood = () => {
         console.log(addFood)
         form.reset()
        
-        fetch('http://localhost:5000/restaurant',{
+        fetch('https://resturant-management-server.vercel.app/restaurant',{
             method:'POST',
             headers:{
                 'content-type': 'application/json'

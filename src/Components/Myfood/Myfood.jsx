@@ -7,7 +7,7 @@ const Myfood = () => {
     const { user } = useContext(AuthContext)
     const [items, setItems] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/restaurant/${user?.email}`)
+        fetch(`https://resturant-management-server.vercel.app/restaurant/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setItems(data)

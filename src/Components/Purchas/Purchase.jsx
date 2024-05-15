@@ -46,7 +46,7 @@ const Purchase = () => {
                     });
                 }
         
-                fetch(`http://localhost:5000/restaurant/uptodate/${_id}`, {
+                fetch(`https://resturant-management-server.vercel.app/restaurant/uptodate/${_id}`, {
                     method: 'PATCH',
                     headers: {
                         'content-type': 'application/json'

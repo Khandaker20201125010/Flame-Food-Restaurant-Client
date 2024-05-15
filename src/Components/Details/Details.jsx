@@ -36,7 +36,7 @@ const Details = () => {
     //         });
     //     }
 
-    //     fetch(`http://localhost:5000/restaurant/${_id}`, {
+    //     fetch(`https://resturant-management-server.vercel.app/restaurant/${_id}`, {
     //         method: 'PATCH',
     //         headers: {
     //             'content-type': 'application/json'

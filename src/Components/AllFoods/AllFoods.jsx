@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import SingleFood from "../SingleFood/SingleFood";
 import { Typewriter } from "react-simple-typewriter";
+import { Helmet } from "react-helmet";
 
 const AllFoods = () => {
     const [allFood, setAllFood] = useState([]);
     const [search, setSearch] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:5000/restaurant')
+        fetch('https://resturant-management-server.vercel.app/restaurant')
             .then(res => res.json())
             .then(data => setAllFood(data))
     }, [])
@@ -23,6 +24,7 @@ const AllFoods = () => {
 
     return (
         <div>
+            <Helmet>All Food Page</Helmet>
             <div className="all ao">
                 <h1 className="text-center m-auto text-white text-8xl font-bold w-3/4">
                     <span style={{ color: 'white', fontWeight: 'bold' }}>

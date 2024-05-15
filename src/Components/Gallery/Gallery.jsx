@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
 import SingleGalary from "../SingleGalary/SingleGalary";
 import { Typewriter } from "react-simple-typewriter";
+import { Helmet } from "react-helmet";
 
 const Gallery = () => {
     const [allFood, setAllFood] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/restaurant')
+        fetch('https://resturant-management-server.vercel.app/restaurant')
             .then(res => res.json())
             .then(data => setAllFood(data))
     }, [])
 
     return (
         <div>
+            <Helmet>Gallery</Helmet>
                <div className=" all ao ">
                 <h1 className="text-center m-auto text-white text-8xl font-bold w-3/4">
                     <span style={{ color: 'white', fontWeight: 'bold' }}>

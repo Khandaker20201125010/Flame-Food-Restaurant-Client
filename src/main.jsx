@@ -33,7 +33,7 @@ const router = createBrowserRouter([
     children:[{
       path:'/',
       element:<Home></Home>,
-      loader:()=> fetch('http://localhost:5000/restaurant')
+      loader:()=> fetch('https://resturant-management-server.vercel.app/restaurant')
        },
        {
         path:'/AllFoods',
@@ -63,17 +63,17 @@ const router = createBrowserRouter([
        {
         path:'/OrderedFood',
         element:<Privetroot><OrderedFood></OrderedFood></Privetroot>,
-        loader:()=> fetch('http://localhost:5000/restaurant')
+        loader:()=> fetch('https://resturant-management-server.vercel.app/restaurant')
       },
        {
         path:'/FeedBack/update/:id',
         element:<Privetroot><FeedBack></FeedBack></Privetroot>,
-        loader: ({params}) => fetch(`http://localhost:5000/restaurant/update/${params.id}`),
+        loader: ({params}) => fetch(`https://resturant-management-server.vercel.app/restaurant/update/${params.id}`),
       },
        {
         path:'/purchase/uptodate/:id',
         element:<Privetroot><Purchase></Purchase></Privetroot>,
-        loader: ({params}) => fetch(`http://localhost:5000/restaurant/uptodate/${params.id}`),
+        loader: ({params}) => fetch(`https://resturant-management-server.vercel.app/restaurant/uptodate/${params.id}`),
       },
        {
         path:'/AddFood',
@@ -87,14 +87,14 @@ const router = createBrowserRouter([
        {
         path:'/details/:id',
         element:<Privetroot><Details></Details></Privetroot>,
-        loader:()=> fetch('http://localhost:5000/restaurant')
+        loader:()=> fetch('https://resturant-management-server.vercel.app/restaurant')
         
       },
     
        {
         path:'/UpdateFood/:id',
         element:<Privetroot><UpdateFood></UpdateFood></Privetroot>,
-        loader: ({params}) => fetch(`http://localhost:5000/restaurant/place/${params.id}`),
+        loader: ({params}) => fetch(`https://resturant-management-server.vercel.app/restaurant/place/${params.id}`),
         
       },
     
